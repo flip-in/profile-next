@@ -1,0 +1,28 @@
+.navbarLogo img {
+  margin-right: 0px !important;
+  position: relative;
+  border-radius: 50%;
+  height: 45px;
+  width: auto;
+  max-width: none;
+}
+
+@media only screen and (max-width: 640px) {
+  .navbarLogo img {
+    height: 40px;
+    width: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .navbarLogo img {
+    height: 60px;
+    width: auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .navbarLogo img {
+    height: 72px;
+    width: auto;
+  }
+}
