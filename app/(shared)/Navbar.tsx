@@ -9,8 +9,8 @@ type Props = {};
 const Navbar = (props: Props) => {
   return (
     <header>
-      <nav className="flex py-5 items-center justify-evenly">
-        <div className="flex items-center gap-7 lg:text-lg md:text-md max-sm:text-sm ">
+      <nav className="flex py-5 items-center justify-center ">
+        <div className="flex items-center gap-7 lg:text-lg md:text-md max-sm:text-sm flex-grow justify-evenly mx-5">
           <Link href="/">About</Link>
           <Link href="/">Portfolio</Link>
           <div className={styles.navbarLogo}>
