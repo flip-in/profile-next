@@ -17,6 +17,6 @@ module.exports = {
   basePath: basePath,
   images: {
     loader: "imgix",
-    path: 'the "domain" of your Imigix source',
+    path: "kinexus-3274.imgix.net",
   },
 };
