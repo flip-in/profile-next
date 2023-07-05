@@ -5,9 +5,12 @@
  **/
 const nextConfig = {
   output: "export",
-  basePath: "/gh-pages-test",
+  basePath: "/profile-next",
   experimental: {
     appDir: true,
+  },
+  images: {
+    unoptimized: true,
   },
 };
 
