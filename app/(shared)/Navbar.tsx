@@ -11,13 +11,13 @@ const Navbar = (props: Props) => {
     <header>
       <nav className="flex py-5 items-center justify-center ">
         <div className="flex items-center gap-7 lg:text-lg md:text-md max-sm:text-sm flex-grow justify-evenly mx-5">
-          <Link href="/">About</Link>
-          <Link href="/">Portfolio</Link>
+          <a href="#about">About</a>
+          <a href="#portfolio">Portfolio</a>
           <div className={styles.navbarLogo}>
             <Image alt="William Price logo" placeholder="blur" src={navLogo} />
           </div>
-          <Link href="/">Contact</Link>
-          <Link href="/">Home</Link>
+          <a href="#contact">Contact</a>
+          <a href="#home">Home</a>
         </div>
       </nav>
     </header>
