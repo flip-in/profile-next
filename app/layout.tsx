@@ -1,5 +1,4 @@
-import "./globals.css";
-import { Inter } from "next/font/google";
+import "../styles/globals.css";
 import Navbar from "app/(shared)/Navbar";
 import { Roboto } from "next/font/google";
 
@@ -7,7 +6,7 @@ const roboto = Roboto({ weight: "400", subsets: ["latin"] });
 
 export const metadata = {
   title: "William Price",
-  description: "This is my profile",
+  description: "This is my profile and portfolio",
 };
 
 export default function RootLayout({
