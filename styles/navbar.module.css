@@ -1,5 +1,19 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar.scrolled {
+  margin-bottom: 1rem;
+  background-color: #fff;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
 .navbarLogo img {
-  margin-right: 0px !important;
+  margin-right: 0 !important;
   position: relative;
   border-radius: 50%;
   height: 45px;
@@ -10,19 +24,20 @@
 @media only screen and (max-width: 640px) {
   .navbarLogo img {
     height: 40px;
-    width: auto;
+  }
+  .navbar {
+    background: linear-gradient(to right, #e6e6e6, #ececec);
   }
 }
 
 @media only screen and (min-width: 768px) {
   .navbarLogo img {
     height: 60px;
-    width: auto;
   }
 }
+
 @media screen and (min-width: 1024px) {
   .navbarLogo img {
     height: 72px;
-    width: auto;
   }
 }
