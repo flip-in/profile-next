@@ -21,6 +21,7 @@ module.exports = {
         "wh-300": "#939393",
         "wh-500": "#595959",
         "wh-900": "#0F0F0F",
+        "bl-900": "#037394",
         "accent-red": "#EA9648",
         "accent-orange": "#F6CF68",
         "accent-green": "#c2E9B4",
