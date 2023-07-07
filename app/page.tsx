@@ -11,7 +11,7 @@ type Props = {};
 function Home({}: Props) {
   return (
     <div className="md:flex justify-center" id="Home">
-      <div className="xl:w-1/2 lg:w-2/3 md:w-3/4">
+      <div className="lg:w-2/3 md:w-3/4">
         <div
           id="hero-background"
           className="flex items-start justify-center bg-center bg-no-repeat h-[500px] mt-5 sm:mt-24 "
