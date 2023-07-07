@@ -24,8 +24,8 @@ function Home({}: Props) {
         </div>
         <div className="mt-5">
           <About />
-          <Contact />
           <Portfolio />
+          <Contact />
         </div>
       </div>
     </div>
