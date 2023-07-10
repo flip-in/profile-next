@@ -7,26 +7,22 @@ interface PortfolioProps {}
 const Portfolio: React.FC<PortfolioProps> = () => {
   return (
     <div className="my-5">
-      <section id="Portfolio" className="bg-gray-200 py-8">
+      <section id="Portfolio" className=" py-8">
         <RightContent
-          title="Speedoc.com"
+          title="Speedoc Corporate Website"
+          titleLink="https://www.speedoc.com"
           subtitle="Speedoc corporate website"
           imageSrc={speedoc1}
           features={[
             {
-              title: "On-demand Healthcare",
+              title: "Full Headless CMS",
               description:
-                "Providing healthcare services at the comfort of your home, at any time.",
+                "Payload CMS serving all content, images, and site-wide variables",
             },
             {
               title: "24/7 Availability",
               description:
                 "Our platform is available round the clock to address your health concerns.",
-            },
-            {
-              title: "Trusted and Reliable",
-              description:
-                "Our team of professionals are certified and vetted, ensuring the best quality healthcare.",
             },
           ]}
         />
