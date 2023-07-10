@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import { HeartIcon } from "@heroicons/react/24/solid";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
@@ -10,15 +9,12 @@ const Footer = (props: Props) => {
   return (
     <footer className="flex justify-center items-center bg-bl-900 text-white h-16">
       <div className="md:basis-1/4 basis-2/5 pl-5 flex items-center">
-        <p className="md:text-sm text-xs text-gray-300 hidden lg:block">
+        <p className="md:text-sm text-xs text-gray-300">
           Made with
           <HeartIcon className="md:h-5 md:w-5 h-4 w-4 mx-1 text-red-500 inline-flex" />
-          by William Price
-        </p>
-        <p className="md:text-sm text-xs text-gray-300 lg:hidden">
-          Made with
-          <HeartIcon className="md:h-5 md:w-5 h-4 w-4 mx-1 text-red-500 inline-flex" />
-          <br></br>
+          <span className="md:hidden">
+            <br />
+          </span>
           by William Price
         </p>
       </div>
