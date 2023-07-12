@@ -25,7 +25,7 @@ const RightContent = ({
   titleLink = "",
 }: Props = {}) => {
   return (
-    <div className="mb-16 sm:mb-0">
+    <div className="mb-16 lg  :mb-0">
       <div className="xl:container m-auto text-gray-600 md:px-12 xl:px-16">
         <div className="lg:p-16 rounded-[4rem] space-y-6 md:flex flex-row-reverse md:gap-6 justify-center md:space-y-0 lg:items-center px-6">
           <div className="md:5/12 lg:w-1/2">
