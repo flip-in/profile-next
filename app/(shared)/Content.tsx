@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { StaticImageData } from "next/image";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline"; // Import the icon
 
 type Props = {
   title?: string;
@@ -26,20 +27,32 @@ const RightContent = ({
   return (
     <div>
       <div className="xl:container m-auto text-gray-600 md:px-12 xl:px-16">
-        <div className=" lg:p-16 rounded-[4rem] space-y-6 md:flex flex-row-reverse md:gap-6 justify-center md:space-y-0 lg:items-center px-6">
+        <div className="lg:p-16 rounded-[4rem] space-y-6 md:flex flex-row-reverse md:gap-6 justify-center md:space-y-0 lg:items-center px-6">
           <div className="md:5/12 lg:w-1/2">
-            {imageSrc && (
-              <Image
-                alt="image"
-                src={imageSrc.src}
-                width={0}
-                height={0}
-                sizes="100vw"
-                style={{ width: "100%", height: "auto" }}
-              ></Image>
-            )}
+            <div className="relative cursor-pointer hover:opacity-50">
+              {imageSrc && (
+                <Image
+                  alt="image"
+                  src={imageSrc.src}
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  style={{ width: "100%", height: "auto" }}
+                ></Image>
+              )}
+
+              <div className="absolute inset-0 flex items-center justify-center rounded-sm  transition-opacity duration-200 shadow-md group">
+                <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100">
+                  <ArrowTopRightOnSquareIcon className="h-6 w-6 text-black" />
+                </div>
+              </div>
+            </div>
+            <p className="text-center mt-2 text-sm text-gray-500">
+              Click to see more
+            </p>
           </div>
           <div className="md:7/12 lg:w-1/2">
+            {/* TITLE */}
             {titleLink ? (
               <a href={titleLink} target="_blank" rel="noopener noreferrer">
                 <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">
@@ -51,7 +64,9 @@ const RightContent = ({
                 {title}
               </h2>
             )}
+            {/* SUBTITLE */}
             <p className="my-8 text-gray-600 ">{subtitle}</p>
+            {/* FEATURES */}
             <div className="divide-y space-y-4 divide-gray-100 ">
               {features.map((feature) => (
                 <div
@@ -101,20 +116,30 @@ const LeftContent = ({
   titleLink = "",
 }: Props = {}) => {
   return (
-    <div className="py-16">
+    <div>
       <div className="xl:container m-auto px-6 text-gray-600 md:px-12 xl:px-16">
-        <div className=" lg:p-16 rounded-[4rem] space-y-6 md:flex md:gap-6 justify-center md:space-y-0 lg:items-center">
+        <div className="lg:p-16 rounded-[4rem] space-y-6 md:flex md:gap-6 justify-center md:space-y-0 lg:items-center">
           <div className="md:5/12 lg:w-1/2">
-            {imageSrc && (
-              <Image
-                alt="image"
-                src={imageSrc.src}
-                width={0}
-                height={0}
-                sizes="100vw"
-                style={{ width: "100%", height: "auto" }}
-              ></Image>
-            )}
+            <div className="relative cursor-pointer hover:opacity-70">
+              {imageSrc && (
+                <Image
+                  alt="image"
+                  src={imageSrc.src}
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  style={{ width: "100%", height: "auto" }}
+                ></Image>
+              )}
+              <div className="absolute inset-0 flex items-center justify-center rounded-sm  transition-opacity duration-200 shadow-md group">
+                <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100">
+                  <ArrowTopRightOnSquareIcon className="h-6 w-6 text-black" />
+                </div>
+              </div>
+            </div>
+            <p className="text-center mt-2 text-sm text-gray-500">
+              Click to enlarge
+            </p>
           </div>
           <div className="md:7/12 lg:w-1/2">
             {titleLink ? (
@@ -164,5 +189,4 @@ const LeftContent = ({
     </div>
   );
 };
-
 export { RightContent, LeftContent };
