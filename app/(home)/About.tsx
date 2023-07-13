@@ -22,7 +22,7 @@ const About: React.FC<AboutProps> = () => {
             ui.dev.
           </p>
           {/* TODO: Add a link to contact section */}
-          <p className="underline">Let&apos;s Get in Touch</p>
+          <p className="underline mb-5 sm:mb-0">Let&apos;s Get in Touch</p>
         </div>
         <div className="sm:flex basis-1/2 flex-col gap-2 sm:mx-2">
           <div>
