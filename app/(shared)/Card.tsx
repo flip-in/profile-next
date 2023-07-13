@@ -19,7 +19,7 @@ const Card = ({ jobTitle, description, link }: Props) => {
         {/* TODO: Add some styling to the link */}
         <div className="mt-5 text-sm">
           {link && (
-            <a target="_blank" href={link}>
+            <a className="underline text-gray-600 " target="_blank" href={link}>
               Work Experience
             </a>
           )}

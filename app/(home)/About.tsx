@@ -1,3 +1,6 @@
+"use client";
+
+import Typewriter from "typewriter-effect";
 import React from "react";
 import Card from "../(shared)/Card";
 
@@ -9,7 +12,15 @@ const About: React.FC<AboutProps> = () => {
       {/* INTRO */}
       <div className="sm:flex mx-5 items-center ">
         <div className="basis-1/2">
-          <h1 className="text-4xl py-4">Hi, I am William Price</h1>
+          <h1 className="text-4xl py-4">
+            <Typewriter
+              options={{
+                strings: ["Hi, I'm Will."],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </h1>
           <p className="text-lg pb-2">
             Software Developer and Manager, <br></br> Engineering and Product
             Development
@@ -22,7 +33,9 @@ const About: React.FC<AboutProps> = () => {
             ui.dev.
           </p>
           {/* TODO: Add a link to contact section */}
-          <p className="underline mb-5 sm:mb-0">Let&apos;s Get in Touch</p>
+          <a href="#Contact" className="underline mb-5 sm:mb-0">
+            Let&apos;s Get in Touch
+          </a>
         </div>
         <div className="sm:flex basis-1/2 flex-col gap-2 sm:mx-2">
           <div>
