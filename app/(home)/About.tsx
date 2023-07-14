@@ -30,7 +30,7 @@ const About: React.FC<AboutProps> = () => {
             high-quality products. I have over three years of experience in a
             technical leadership role, and I have a Full-Stack Web Developer
             certification from Le Wagon and two Javascript certifications from
-            ui.dev.
+            ui.dev and Epic React.
           </p>
           {/* TODO: Add a link to contact section */}
           <a href="#Contact" className="underline mb-5 sm:mb-0">
