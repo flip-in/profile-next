@@ -1,5 +1,5 @@
 import React from "react";
-import { LeftContent, RightContent } from "../(shared)/Content";
+import { Content } from "../(shared)/Content";
 import speedoc1 from "/public/assets/speedoc-desktop.png";
 import blog1 from "public/assets/blog-desktop.png";
 
@@ -9,11 +9,12 @@ const Portfolio: React.FC<PortfolioProps> = () => {
   return (
     <div className="my-5">
       <section id="Portfolio" className=" py-8">
-        <RightContent
+        <Content
           title="Speedoc Corporate Website"
           titleLink="https://www.speedoc.com"
           subtitle="Speedoc corporate website"
           imageSrc={speedoc1}
+          imageLeft={false}
           features={[
             {
               title: "Full Headless CMS",
@@ -27,11 +28,12 @@ const Portfolio: React.FC<PortfolioProps> = () => {
             },
           ]}
         />
-        <LeftContent
+        <Content
           title="AI Blog App"
           titleLink="https://blog-ai-app-ten.vercel.app/"
           subtitle="Personal Next.js sandbox project to experiment with OpenAI and Tip Tap editor"
           imageSrc={blog1}
+          imageLeft={true}
           features={[
             {
               title: "Prisma and MySQL",

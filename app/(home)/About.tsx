@@ -18,6 +18,7 @@ const About: React.FC<AboutProps> = () => {
                 strings: ["Hi, I'm Will."],
                 autoStart: true,
                 loop: true,
+                cursorClassName: "text-wh-10",
               }}
             />
           </h1>
