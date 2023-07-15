@@ -13,3 +13,7 @@ body,
   background-color: #f6f4f0;
   font-family: "Inter", sans-serif;
 }
+.noScroll {
+  overflow: hidden;
+  height: 100%;
+}

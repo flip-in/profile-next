@@ -1,14 +1,29 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { StaticImageData } from "next/image";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 import Modal from "./Modal";
 
 type Props = {
   title?: string;
   subtitle?: string;
-  imageSrc?: StaticImageData;
+  images?: {
+    desktop: {
+      path: string;
+      alt: string;
+      width: number;
+      height: number;
+      priority?: boolean;
+    };
+    mobile: {
+      path: string;
+      alt: string;
+      width: number;
+      height: number;
+      priority?: boolean;
+    };
+  }[];
+
   features?: { title: string; description: string }[];
   titleLink?: string;
   imageLeft?: boolean;
@@ -17,7 +32,7 @@ type Props = {
 const Content = ({
   title = "Title goes here",
   subtitle = "Subtitle goes here",
-  imageSrc,
+  images = [],
   features = [
     {
       title: "Feature title",
@@ -28,10 +43,34 @@ const Content = ({
   imageLeft = false,
 }: Props = {}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const openModal = () => {
+    document.body.classList.add("noScroll");
+    setIsModalOpen(true);
+  };
 
+  const closeModal = () => {
+    document.body.classList.remove("noScroll");
+
+    setIsModalOpen(false);
+  };
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth <= 768);
+    return () => {
+      document.body.classList.remove("noScroll");
+    };
+  }, []);
+
+  let mainImage;
+  if (images.length > 0) {
+    if (isMobile && images[0].mobile) {
+      mainImage = images[0].mobile;
+    } else if (images[0].desktop) {
+      mainImage = images[0].desktop;
+    }
+  }
   return (
     <div className="mb-16 sm:mb-0">
       <div className="xl:container m-auto px-6 text-gray-600 md:px-12 xl:px-16">
@@ -45,14 +84,13 @@ const Content = ({
               className="relative cursor-pointer hover:opacity-70"
               onClick={openModal}
             >
-              {imageSrc && (
+              {mainImage?.path && (
                 <Image
-                  alt="image"
-                  src={imageSrc.src}
-                  width={0}
-                  height={0}
-                  sizes="100vw"
-                  style={{ width: "100%", height: "auto" }}
+                  alt={mainImage.alt}
+                  src={mainImage.path}
+                  width={mainImage.width}
+                  height={mainImage.height}
+                  priority={mainImage.priority}
                 ></Image>
               )}
               <div className="absolute inset-0 flex items-center justify-center rounded-sm  transition-opacity duration-200 shadow-md group">
@@ -65,11 +103,7 @@ const Content = ({
               Click to enlarge
             </p>
           </div>
-          <Modal
-            isOpen={isModalOpen}
-            closeModal={closeModal}
-            imgSrc={imageSrc ? imageSrc.src : ""}
-          />
+          <Modal isOpen={isModalOpen} closeModal={closeModal} images={images} />
 
           <div className="md:7/12 lg:w-1/2">
             {titleLink ? (
