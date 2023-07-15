@@ -52,13 +52,17 @@ const Content = ({
 
   const closeModal = () => {
     document.body.classList.remove("noScroll");
-
     setIsModalOpen(false);
   };
 
   useEffect(() => {
-    setIsMobile(window.innerWidth <= 768);
+    const setMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    setMobile(); // Setting initial state of isMobile on first render
+    window.addEventListener("resize", setMobile);
     return () => {
+      window.removeEventListener("resize", setMobile);
       document.body.classList.remove("noScroll");
     };
   }, []);

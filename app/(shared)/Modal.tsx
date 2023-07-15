@@ -1,4 +1,3 @@
-"use client";
 import { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import Image from "next/image";
@@ -29,10 +28,11 @@ type ModalProps = {
 
 const Modal = ({ isOpen, closeModal, images }: ModalProps) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    handleResize(); // To immediately update state on first render
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
