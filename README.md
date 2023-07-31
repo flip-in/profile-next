@@ -2,7 +2,7 @@
 
 This is my personal portfolio project built with Next.js and hosted on github pages.
 
-You can see it live here: [](https://flip-in.github.io/profile-next/)
+You can see it live here: [https://flip-in.github.io/profile-next/](https://flip-in.github.io/profile-next/)
 
 ![william portfolio desktop](public/assets/portfolio-ss-desktop.png)
 
