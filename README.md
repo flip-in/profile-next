@@ -9,3 +9,4 @@ You can see it live here: [https://flip-in.github.io/profile-next/](https://flip
 ![william portfolio mobile](public/assets/portfolio-ss-mobile.png)
 
 You can install the dependencies with `npm install` then run `npm run dev` to launch the dev server.
+  
