@@ -5,6 +5,8 @@ import blog1 from 'public/assets/blog-desktop.png';
 import blog2 from 'public/assets/blog-mobile.png';
 import creperie1 from 'public/assets/creperie1-desktop.png';
 import creperie2 from 'public/assets/creperie2-desktop.png';
+import scrapit1 from 'public/assets/scrapit-banner.png';
+import scrapit2 from 'public/assets/scrapit-screens.png';
 
 interface PortfolioProps {}
 
@@ -141,6 +143,54 @@ const Portfolio: React.FC<PortfolioProps> = () => {
               title: 'OpenAI API',
               description:
                 'Uses OpenAI API to generate blog content based on the title and tone set by the user.',
+            },
+          ]}
+        />
+        <Content
+          title='Scrapit - Compost Simplified'
+          titleLink='https://github.com/flip-in/scrap-it'
+          subtitle='Student capstone project to help users compost at home'
+          images={[
+            {
+              desktop: {
+                path: scrapit1.src,
+                alt: 'Scrapit',
+                width: 800,
+                height: 600,
+              },
+              mobile: {
+                path: scrapit1.src,
+                alt: 'Scrapit ',
+                width: 500,
+                height: 400,
+              },
+            },
+            {
+              desktop: {
+                path: scrapit2.src,
+                alt: 'scrapit mobile screens',
+                width: 800,
+                height: 600,
+              },
+              mobile: {
+                path: scrapit2.src,
+                alt: 'scrapit mobile screens',
+                width: 500,
+                height: 400,
+              },
+            },
+          ]}
+          imageLeft={true}
+          features={[
+            {
+              title: 'Ruby on Rails and PostgreSQL',
+              description:
+                'Uses Ruby on Rails with ActiveRecord to interface with PostgreSQL database',
+            },
+            {
+              title: 'User and Admin Authentication and Authorization',
+              description:
+                'Featured separate dashboards and interfaces for users and admins with different permissions',
             },
           ]}
         />
