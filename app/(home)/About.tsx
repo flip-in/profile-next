@@ -23,7 +23,7 @@ const About: React.FC<AboutProps> = () => {
             />
           </h1>
           <p className='text-lg pb-2'>
-            Software Developer and Manager, <br></br> Engineering and Product
+            Fullstack Developer and Manager, <br></br> Engineering and Product
             Development
           </p>
           <p className='text-sm text-wh-500 mb-10 '>
