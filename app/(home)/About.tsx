@@ -46,14 +46,14 @@ const About: React.FC<AboutProps> = () => {
             <Card
               jobTitle='MANAGER'
               description='Having held technical positions leading product, engineering, and QA, I am knowledgeable on the entire software development lifecycle. I provision teams, define and breakdown requirements, and ensure that the definition of done is met for all features.'
-              link='https://www.dropbox.com/s/8z5a22m28e9gj11/William%20Price%20-%20CV-1.pdf?dl=0'
+              link='https://www.dropbox.com/scl/fi/z84g4n0zai0adcfa5lik4/William-Price-Technical-Manager.pdf?rlkey=j34cwkhk8cd1zohh8m66un4rv&dl=0'
             />
           </div>
           <div className=' mb-2'>
             <Card
               jobTitle='FULL STACK DEVELOPER'
               description='As a full stack developer I have built apps in React, Express, and Ruby on Rails. I have working knowledge of both SQL and no-SQL databases. Recently my interests are in Next.js, Headless CMS, and OpenAI API. '
-              link='https://www.dropbox.com/scl/fi/fdcg02uw4m15uocsmtdxm/William-Price-Fullstack-CV.pdf?rlkey=pnffsd08n3iefdhbdyq780jsv&dl=0'
+              link='https://www.dropbox.com/scl/fi/yk39mjatw8okaul3c680w/William-Price-Developer-CV.pdf?rlkey=oiso5bneb7pyovscojek089gp&dl=0'
             />
           </div>
         </div>
