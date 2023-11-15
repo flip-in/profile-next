@@ -53,7 +53,7 @@ const About: React.FC<AboutProps> = () => {
             <Card
               jobTitle='FULL STACK DEVELOPER'
               description='As a full stack developer I have built apps in React, Express, and Ruby on Rails. I have working knowledge of both SQL and no-SQL databases. Recently my interests are in Next.js, Headless CMS, and OpenAI API. '
-              link='https://www.dropbox.com/scl/fi/yk39mjatw8okaul3c680w/William-Price-Developer-CV.pdf?rlkey=oiso5bneb7pyovscojek089gp&dl=0'
+              link='https://www.dropbox.com/scl/fi/9qvz1tvaxqnvtzvseynvy/William-Price-Developer-CV.pdf?rlkey=y42cypit2ymw2ydy1i9oarlao&dl=0'
             />
           </div>
         </div>
