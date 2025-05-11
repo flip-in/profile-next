@@ -23,6 +23,6 @@
     "react-responsive-carousel": "^3.2.23",
     "tailwindcss": "4.1.4",
     "typescript": "5.8.3",
-    "typewriter-effect": "^2.21.0"
+    "typewriter-effect": "^2.22.0"
   }
 }
